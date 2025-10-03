@@ -1,0 +1,3 @@
+6.1:
+If the user chooses "cancel", the "option" variable is designated the value 2, which still results in the dialog "You've chosen NO" in the later part.
+To customize as mentioned, we can add JOptionPane.YES_NO_OPTION to showMessageDialog.
