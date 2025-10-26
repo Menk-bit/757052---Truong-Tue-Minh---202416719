@@ -7,6 +7,7 @@ public class DigitalVideoDisc {
 	private int id;	
 	private static int nbDigitalVideoDiscs = 0;
 	
+	
 	public String getTitle() {
 		return title;
 	}
@@ -23,9 +24,15 @@ public class DigitalVideoDisc {
 		return cost;
 	}
 	
+	public int getId() {
+		return id;
+	}
+	
+	
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	
 	
 	public DigitalVideoDisc(String title) {
 		super();
@@ -34,23 +41,52 @@ public class DigitalVideoDisc {
 		this.id = nbDigitalVideoDiscs;
 		
 	}
+	
 	public DigitalVideoDisc(String title, String category, float cost) {
 		this(title);
 		this.category = category;
 		this.cost = cost;
 	}
+	
 	public DigitalVideoDisc(String title, String category, String director, float cost) {
 		this(title);
 		this.category = category;
 		this.director = director;
 		this.cost = cost;
 	}
+	
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
 		this(title);
 		this.category = category;
 		this.director = director;
 		this.length = length;
 		this.cost = cost;
+	}
+	
+	public boolean isMatch(int idSearched) {
+		if (this.id == idSearched) {return true;} else {return false;}
+	}
+	
+	public boolean isMatch(String titleSearched) {
+        if (titleSearched == null || titleSearched.trim().isEmpty()) {
+            return false;
+        }
+
+        String dvdTitleLower = this.title.toLowerCase();
+
+        String[] keywords = titleSearched.toLowerCase().split("\\s+");
+
+        for (String keyword : keywords) {         
+            if (dvdTitleLower.contains(keyword)) {
+                return true; 
+            }
+        }
+        return false;
+    }
+	
+	@Override
+	public String toString() {
+		return "DVD - " + this.title + " - " + this.category + " - " + this.director + " - " + this.length + ": " + this.cost + " $";
 	}
 	
 	
