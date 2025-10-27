@@ -1,3 +1,5 @@
+package Lab03.OtherProjects.Lab01;
+
 import javax.swing.JOptionPane;
 public class FirstDegreeEquation {
 	public static void main (String[] args) {

@@ -1,3 +1,9 @@
+package Lab03.OtherProjects.Lab01.StarTriangle.src;
+
+
+
+
+
 import javax.swing.*;
 
 public class StarTriangle {

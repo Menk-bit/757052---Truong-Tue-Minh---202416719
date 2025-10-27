@@ -1,3 +1,5 @@
+package Lab03.AimsProject.hust.soict.dsai.aims;
+
 public class StoreTest {
 	public static void main(String[] args) {
 		Store storeJohn = new Store();

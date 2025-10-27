@@ -1,3 +1,5 @@
+package Lab03.AimsProject.hust.soict.dsai.aims;
+
 public class Cart {
 	public static final int MAX_NUMBER_ORDERED = 20;
 	private DigitalVideoDisc itemsOrdered[] = 
