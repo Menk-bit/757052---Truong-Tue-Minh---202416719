@@ -46,26 +46,6 @@ public class DigitalVideoDisc extends Disc implements Playable {
 		this.cost = cost;
 	}
 	
-	public boolean isMatch(int idSearched) {
-		if (this.id == idSearched) {return true;} else {return false;}
-	}
-	
-	public boolean isMatch(String titleSearched) {
-        if (titleSearched == null || titleSearched.trim().isEmpty()) {
-            return false;
-        }
-
-        String dvdTitleLower = this.title.toLowerCase();
-
-        String[] keywords = titleSearched.toLowerCase().split("\\s+");
-
-        for (String keyword : keywords) {         
-            if (dvdTitleLower.contains(keyword)) {
-                return true; 
-            }
-        }
-        return false;
-    }
 	
 	@Override
 	public String toString() {

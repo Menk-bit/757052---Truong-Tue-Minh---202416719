@@ -1,39 +1,30 @@
-import hust.soict.dsai.aims.media.DigitalVideoDisc;
-
+import hust.soict.dsai.aims.media.*;
+import java.util.*;
 public class Store {
-	private static final int MAX_STORE = 100000;
-	private int nbDVD;
-	private DigitalVideoDisc[] itemsInStore;
+	private List<Media> itemsInStore;
 	
 	public Store() {
 		super();
-		this.itemsInStore = new DigitalVideoDisc[MAX_STORE];
-		nbDVD = 0;
+		this.itemsInStore = new ArrayList<Media>();
 	}
 
 	public String getItemsInStore() {
 		String listDVD = "";
-		for (int i = 0; i < nbDVD; i++) {
-			listDVD = listDVD + itemsInStore[i].getTitle() + "; ";
+		for (Media item: itemsInStore) {
+			listDVD = listDVD + item.getTitle() + "; ";
 		}
 		return listDVD;
 	}
 
 	public void addDVD(DigitalVideoDisc dvd) {
-		itemsInStore[nbDVD] = dvd;
-		nbDVD++;
+		itemsInStore.add(dvd);
 	}
 
 	public void removeDVD(String title) {
-	    for (int i = 0; i < nbDVD; i++) {
-	        if (itemsInStore[i].getTitle().equals(title)) {
-	            for (int j = i; j < nbDVD - 1; j++) {
-	                itemsInStore[j] = itemsInStore[j + 1];
-	            }
-	            nbDVD--;
-	            
-	            itemsInStore[nbDVD] = null; 
-	            break;	
+	    for (Media item: itemsInStore) {
+	        if (item.getTitle().equals(title)) {
+	            itemsInStore.remove(item);
+	            break;
 	        }
 	    }
 	}
