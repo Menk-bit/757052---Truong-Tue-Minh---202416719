@@ -1,4 +1,4 @@
-
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Store {
 	private static final int MAX_STORE = 100000;
