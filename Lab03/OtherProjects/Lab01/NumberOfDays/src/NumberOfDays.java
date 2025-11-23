@@ -1,8 +1,3 @@
-package Lab03.OtherProjects.Lab01.NumberOfDays.src;
-
-
-
-
 
 import java.util.Scanner;
 public class NumberOfDays {

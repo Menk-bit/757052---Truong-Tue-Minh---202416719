@@ -1,4 +1,4 @@
-package Lab03.AimsProject.hust.soict.dsai.aims;
+
 
 public class Store {
 	private static final int MAX_STORE = 100000;

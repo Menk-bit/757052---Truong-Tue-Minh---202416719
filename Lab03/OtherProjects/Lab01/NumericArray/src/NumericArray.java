@@ -1,9 +1,3 @@
-package Lab03.OtherProjects.Lab01.NumericArray.src;
-
-
-
-
-
 import java.util.Arrays;
 
 public class NumericArray {

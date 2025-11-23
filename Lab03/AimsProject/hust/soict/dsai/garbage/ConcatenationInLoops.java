@@ -1,4 +1,4 @@
-package Lab03.AimsProject.hust.soict.dsai.garbage;
+
 
 import java.util.Random;
 public class ConcatenationInLoops {

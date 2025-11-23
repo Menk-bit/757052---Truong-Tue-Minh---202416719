@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path=""/>
+	<classpathentry kind="src" path="Lab03/OtherProjects/Lab01/StarTriangle/src"/>
+	<classpathentry kind="src" path="Lab03/AimsProject/hust/soict/dsai/aims"/>
+	<classpathentry kind="src" path="Lab03/AimsProject/hust/soict/dsai/garbage"/>
+	<classpathentry kind="src" path="Lab03/OtherProjects/Lab01/JavaBasics/src"/>
+	<classpathentry kind="src" path="Lab03/OtherProjects/Lab01/MatricesAddition/src"/>
+	<classpathentry kind="src" path="Lab03/OtherProjects/Lab01/NumericArray/src"/>
+	<classpathentry kind="src" path="Lab03/OtherProjects/Lab01/NumberOfDays/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
