@@ -1,3 +1,4 @@
+package hust.soict.dsai.aims.store;
 import hust.soict.dsai.aims.media.*;
 import java.util.*;
 public class Store {
@@ -16,11 +17,11 @@ public class Store {
 		return listDVD;
 	}
 
-	public void addDVD(DigitalVideoDisc dvd) {
+	public void addMedia(Media dvd) {
 		itemsInStore.add(dvd);
 	}
 
-	public void removeDVD(String title) {
+	public void removeMedia(String title) {
 	    for (Media item: itemsInStore) {
 	        if (item.getTitle().equals(title)) {
 	            itemsInStore.remove(item);
@@ -28,4 +29,15 @@ public class Store {
 	        }
 	    }
 	}
+	
+	public Media findMediaByTitle(String title) {
+	    for (Media item: itemsInStore) {
+			if (item.getTitle().equals(title)) {
+	            return item;
+	        }
+	    }
+	    System.out.println("No such media with that title");
+	    return null;
+	}
 }
+

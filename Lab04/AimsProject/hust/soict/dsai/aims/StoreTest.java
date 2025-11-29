@@ -1,4 +1,5 @@
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import hust.soict.dsai.aims.store.Store;
 
 public class StoreTest {
 	public static void main(String[] args) {
@@ -14,12 +15,12 @@ public class StoreTest {
 		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin",
 	            "Animation", 18.99f);
 	
-		storeJohn.addDVD(dvd1);
-		storeJohn.addDVD(dvd2);
+		storeJohn.addMedia(dvd1);
+		storeJohn.addMedia(dvd2);
 		System.out.println(storeJohn.getItemsInStore());
 		
-		storeJohn.removeDVD("Star Wars");
-		storeJohn.addDVD(dvd3);
+		storeJohn.removeMedia("Star Wars");
+		storeJohn.addMedia(dvd3);
 		System.out.println(storeJohn.getItemsInStore());
 	}
 }

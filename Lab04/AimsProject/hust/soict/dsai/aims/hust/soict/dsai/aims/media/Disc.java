@@ -12,7 +12,6 @@ public class Disc extends Media {
 	}
 	
 	public Disc() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 	

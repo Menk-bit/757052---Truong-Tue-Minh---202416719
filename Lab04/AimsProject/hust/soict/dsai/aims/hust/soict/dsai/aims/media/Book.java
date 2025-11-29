@@ -22,7 +22,12 @@ public class Book extends Media {
 		}
 	}
 	
-	public Book() {
+	public Book(String title, String category, float cost, String author) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.cost = cost;
+		this.addAuthor(author);
 		// TODO Auto-generated constructor stub
 	}
 

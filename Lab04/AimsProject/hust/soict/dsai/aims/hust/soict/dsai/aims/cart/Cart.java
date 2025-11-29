@@ -1,4 +1,6 @@
+package hust.soict.dsai.aims.cart;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import hust.soict.dsai.aims.media.*;
 
@@ -18,6 +20,20 @@ public class Cart {
 		} else {System.out.println("The media is not in cart.");}
 	}
 	
+	public void removeMedia(String title) {
+		for (Media item: itemsOrdered) {
+			Media temp = null;
+			
+			if (item.getTitle() == title) {
+				temp = item;
+				break;
+			} 
+			
+			if (itemsOrdered.contains(temp)) {
+				itemsOrdered.remove(temp);
+			} else {System.out.println("The media is not in cart.");}
+		}
+	}
 	public float totalCost() {
 	    float total = 0.0f;
 	    for (Media item: itemsOrdered) {
@@ -58,5 +74,9 @@ public class Cart {
 			}
 		}
 		if (matchCount == 0) {System.out.println("None");}
+	}
+	
+	public void sort() {
+		Collections.sort(itemsOrdered, new MediaComparatorByCostTitle());
 	}
 }

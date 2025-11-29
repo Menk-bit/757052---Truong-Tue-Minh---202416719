@@ -47,9 +47,7 @@ public class CompactDisc extends Disc implements Playable {
 		return totalLength;	
 	}
 	
-	public CompactDisc() {
-		super();
-		// TODO Auto-generated constructor stub
+	public CompactDisc(String title, String category, float cost, ArrayList<Track> tracks, String artist) {
 	}
 	
 }

@@ -1,0 +1,38 @@
+Question (Lab02): 
+
+- If you create a constructor method to build a DVD by title then create a constructor method to build a DVD by category, 
+does JAVA allow you to do this? 
+
+Answer:
+- To prevent it being unable to tell which constructor method from which, Java does not allow the case. 
+
+Specifically, a constructor method to build a DVD by title requires a single "String" type parameter, which
+happens to be the same for a constructor method building a DVD by category. Accepting both cases would lead
+to a "confusion" where Java does not know which method to use, and therefore it is not allowed.
+
+
+Question (Lab03):
+
+- Is JAVA a Pass by Value or a Pass by Reference programming language?
+
+Answer:
+- Java is a pass by reference language. When working with variables of primitive type, the values being passed is the variables' values. On the other hand, objects will pass their reference as the value, hence the example given in the lab03.
+
+
+Question (Lab04):
+Alternatively, to compare items in the cart, instead of using C omparator, we can use the Comparable interface and override the compareTo()method. 
+You can refer to the Java docs to see the information of this interface.
+
+Suppose we are taking this Comparable interface approach.
+
+- What class should implement the Comparable interface?
+Answer: the class whose objects we need sorting (e.g: our "Media" class, if we want to sort our "Store" or "Cart").
+
+- In those classes, how should you implement the compareTo()method be to reflect the ordering that we want?
+Answer: the same way we implement our way of comparing in Comparator interface: we compare the attributes directly and return a postive/negative value.
+
+- Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+Answer: No, we cannot, since they both require overriding the same method compareTo (or at least it seems harder in my opinion).
+
+- Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+Answer: I would add another Comparator class (aside from MediaComparatorByTitleCost and MediaComparatorByCostTitle) to implement that ordering rule. 
