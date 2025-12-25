@@ -1,3 +1,5 @@
+package hust.soict.dsai.garbage;
+
 
 
 import java.io.IOException;

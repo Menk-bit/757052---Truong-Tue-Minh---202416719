@@ -2,19 +2,15 @@ package hust.soict.dsai.aims.store;
 import hust.soict.dsai.aims.media.*;
 import java.util.*;
 public class Store {
-	private List<Media> itemsInStore;
+	private ArrayList<Media> itemsInStore;
 	
 	public Store() {
 		super();
 		this.itemsInStore = new ArrayList<Media>();
 	}
 
-	public String getItemsInStore() {
-		String listDVD = "";
-		for (Media item: itemsInStore) {
-			listDVD = listDVD + item.getTitle() + "; ";
-		}
-		return listDVD;
+	public ArrayList<Media> getItemsInStore() {
+		return itemsInStore;
 	}
 
 	public void addMedia(Media dvd) {
